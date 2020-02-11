@@ -5,6 +5,10 @@ unlet b:current_syntax
 syntax include @Perl syntax/perl.vim
 unlet b:current_syntax
 syntax include @Python syntax/python.vim
+unlet b:current_syntax
+syntax include @Systemd syntax/systemd.vim
+unlet b:current_syntax
+syntax include @Nginx syntax/nginx.vim
 let b:current_syntax = s:bcs
 
 function! Def_heredoc(marker, contains)
@@ -19,3 +23,5 @@ endfunction
 call Def_heredoc("PYTHON", "@Python")
 call Def_heredoc("PERL", "@Perl")
 call Def_heredoc("SHELL", "@Sh")
+call Def_heredoc("SYSTEMD", "@Systemd")
+call Def_heredoc("NGINX", "@Nginx")
